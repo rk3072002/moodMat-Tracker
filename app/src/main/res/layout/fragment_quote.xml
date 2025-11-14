@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Top Row: Search + Filter Button -->
+    <LinearLayout
+        android:id="@+id/topSearchRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Search quotes..."
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:background="@drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFilter"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/card_green"
+            android:text="My"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- RecyclerView (Quote List) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerQuotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomInputRow"
+        android:layout_below="@id/topSearchRow"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        tools:listitem="@layout/item_quote" />
+
+    <!-- Bottom Input Row: EditQuote + Upload Button -->
+    <LinearLayout
+        android:id="@+id/bottomInputRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/editQuote"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Write your quote..."
+            android:background="@drawable/edit_text"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:text="Upload"
+            android:background="@drawable/white_btn"
+            android:textColor="@android:color/black"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</RelativeLayout>

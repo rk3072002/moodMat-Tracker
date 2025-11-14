@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+
+    android:background="#BAB9B9">
+
+    <EditText
+        android:id="@+id/etMood"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="How are you feeling Today?"
+        android:background="@drawable/edit_text"
+        android:backgroundTint="#BDBDBD"
+        android:padding="10dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toStartOf="@id/btnPost"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPost"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:contentDescription="send"
+        android:background="@drawable/send"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_feed"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/etMood"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

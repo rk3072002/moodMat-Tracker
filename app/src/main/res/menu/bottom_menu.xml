@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mood" android:icon="@drawable/sad_emoji" android:title="Mood" />
+    <item android:id="@+id/feed" android:icon="@drawable/home" android:title="Feed" />
+    <item android:id="@+id/history" android:icon="@drawable/history" android:title="History" />
+    <item android:id="@+id/stats" android:icon="@drawable/stats" android:title="Stats" />
+    <item android:id="@+id/quote" android:icon="@drawable/quot" android:title="Quote" />
+</menu>
