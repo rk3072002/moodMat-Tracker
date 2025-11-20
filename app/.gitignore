@@ -1,1 +1,21 @@
-/build
+# Android / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+
+# Firebase / Google services
+google-services.json
+*.json
+
+# Keystore
+*.jks
+*.keystore
+
+# Env files
+*.env
+.env.*
+
+# Logs
+*.log
